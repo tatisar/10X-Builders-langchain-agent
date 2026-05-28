@@ -26,6 +26,13 @@ OPENROUTER_TEMPERATURE=0
 OPENROUTER_HTTP_REFERER=https://your-app-domain.com
 OPENROUTER_APP_TITLE=10Xbuilder Agents
 ```
+Para agregar el tool de buscar vuelos, se necesita
+
+```bash
+SEARCHAPI_API_KEY=your_searchapi_key
+SEARCHAPI_BASE_URL=https://www.searchapi.io/api/v1/search
+SEARCHAPI_HTTP_TIMEOUT_MS=15000
+```
 
 ## Run in development
 

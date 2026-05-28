@@ -10,6 +10,12 @@ const envSchema = z.object({
   OPENROUTER_TEMPERATURE: z.coerce.number().default(0),
   OPENROUTER_HTTP_REFERER: z.string().url().optional(),
   OPENROUTER_APP_TITLE: z.string().min(1).optional(),
+  SEARCHAPI_API_KEY: z.string().min(1, 'SEARCHAPI_API_KEY is required'),
+  SEARCHAPI_BASE_URL: z
+    .string()
+    .url()
+    .default('https://www.searchapi.io/api/v1/search'),
+  SEARCHAPI_HTTP_TIMEOUT_MS: z.coerce.number().int().positive().default(15000),
 });
 
 export type AppEnv = z.infer<typeof envSchema>;
